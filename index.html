@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;800&family=Poppins:wght@400;700;800&family=Ubuntu&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="bigger-container">
+    <div class = "contact">
+      <img src="images/close.svg" class="closeContact" >
+      <h2>Rivo</h2>
+      <h3>Contact Us</h3>
+      
+        <button style="width: 150px; padding : 10px; display: flex; justify-content: space-between; cursor: default;">
+          <div>Email</div>
+          <a href="mailto:minehamza97@gmail.com">
+            <img src="images/icons8-email-50.png">
+          </a>
+
+        </button>
+
+      <p>FAX : 123-456-789</p>
+
+    </div>
+    <div class = "contact" id = "connect">
+      <img src="images/close.svg" class="closeContact" >
+      <div style="display: none; flex-direction:  column; align-items: center;" class = "sign-up-form signupshown">
+        <h2>Rivo</h2>
+        <div style="display: grid; place-items: center;">
+          <h3>Sign Up</h3>
+          <h3>Already have an account <span id = "log-in-btn" onclick = "logIn()">Log in</span></h3>
+        </div>
+        <div id = "name">
+          <input type="text" style="margin-right: 10px;" placeholder="First Name">
+          <input type="text"  placeholder="Last Name">
+        </div>
+        <div id = "email">
+          <input type="text"  placeholder="Email">
+          <input type="text"  placeholder="Phone Number" style="margin-bottom: 30px;">
+        </div>
+        <button>
+          <div>SUBMIT</div>
+          <img src="images/icons8-correct.svg" style="display: none;">
+        </button>
+      </div>
+
+      <div class = "log-in-form loginhidden">
+        <h2>Rivo</h2>
+        <h3>Log in</h3>
+        <div style="width : 100%">
+          <input type="text"  placeholder="Email" style="display: block; width: 100%; margin-bottom: 10px;">
+          <input type="text"  placeholder="Password" style="display: block; width: 100%;">
+        </div>
+        <button style="margin-top: 15px;" >Log in</button>
+      </div>
+
+    </div>
+    <div class="main-container" id = "mainContainer">
+      <div class="landing-page" style="position: relative;">
+        <nav>
+          <div class="company-name" >Rivo</div>
+          <ul>
+            <li class="nav-naviguation" onclick = "shop()">Shop</li>
+            <li class="nav-naviguation" onclick = "features()">Features</li>
+            <li class="nav-naviguation" onclick = "contact()">Contact</li>
+          </ul>
+          <img src="images/menu-svgrepo-com.svg" alt="menu" style="display: none;">
+          <div id="login-bag">
+            <img id = "shopping-bag" src="images/shopping-bag-svgrepo-com.svg" onclick = "shoppingBag()">
+            <div style="display: none;" onclick="contact()">contact</div>
+            <button onclick = "logInSignUp()">Login</button>
+
+          </div>
+        </nav>
+        <div class = "landing-page-content">
+          <div class="left">
+            <h1>Discover and Find Your Own Fashion!</h1>
+            <p>Explore our curated collection of stylish
+              clothing and accessories tailored to your
+              unique taste.</p>
+            <button onclick = "explore()">EXPLORE NOW</button>
+          </div>
+          <div class="landing-page-content right">
+            <img src="images/Untitled-removebg.png">
+          </div>
+        </div>
+
+        <div class = "cart cart-inactive" style="color : white;">
+          <img src="images/close.svg" class = "closeContact" id = "closeButtonCart">
+          <div id = "empty-cart" style="display: grid; place-items: center;">
+            <div>
+              <h2 style="margin-bottom: 20px;">Your Cart Is Empty</h2>
+
+            </div>
+            <div onclick = "shop()" style="cursor: pointer; font-weight: 800; border : 2px solid white; padding : 5px;">Check out our products</div>
+          </div>
+          <div style = "display: none;" id = "non-empty-cart">
+            <h2>Cart</h2>
+            <hr>
+            <div class = "cart-goods"></div> 
+            <div style="color : white; font-weight: 800; font-size: 1.3rem; margin-top: 20px; background-color: #224F34; padding: 10px; border-radius: 5px; text-align: center;">Price : $<span id = "totalPrice">0</span></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="middle-section">
+        <div class = "introduction-text">
+          <h2>Best selling</h2>
+          <p>Get in on the trend with our curated selection of best-selling styles.</p>
+        </div>
+        <div id = "best-selling-products">
+          <div id = "bs-tablet-left">
+            <div id="bs-product1" style = "margin-right : 50px; margin-left: 50px;"class = "bs">
+              <img src="images/best selling products 1.png" class = "bs-product bs-product1" alt="product1">
+              <div  class = "price-container">
+                <h3>Regular Fit Long Sleeve Top</h3>
+                  <div class="price-rating">
+                    <div class="price">$38.99</div>
+                      <div class = "vertical-line"></div>
+                      <div class = "rating-component">
+                        <div class="rating">5.0</div>
+                        <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                      </div>
+                      <button class = "addToCart">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+            <div id="bs-product2" style = "margin-right : 50px;" class = "bs">
+              <img src="images/best selling products 2.png" class = "bs-product bs-product2" alt="product2">
+              <div class = "price-container">
+                <h3>Black Crop Tailored Jacket</h3>
+                  <div class="price-rating">
+                    <div class="price">$62.99</div>
+                    <div class = "vertical-line"></div>
+                    <div class = "rating-component">
+                      <div class="rating">4.9</div>
+                      <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                    </div>
+                    <button class = "addToCart">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id = "bs-tablet-right">
+            <div id="bs-product3" class = "bs">
+              <img src="images/best selling products 3.png" class = "bs-product bs-product3" alt="product3">
+              <div class = "price-container">
+                <h3>Textured Sunset Shirt</h3>
+                  <div class="price-rating">
+                    <div class="price">$49.99</div>
+                    <div class = "vertical-line"></div>
+                    <div class = "rating-component">
+                      <div class="rating">5.0</div>
+                      <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                    </div>
+                    <button class = "addToCart">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="our-products">
+          <h2>Our Products</h2>
+          <ul>
+            <li data-tab-target = "sale">SALE</li>
+            <li data-tab-target="hot">HOT</li>
+            <li data-tab-target="new-arrivals">NEW ARRIVALS</li>
+            <li data-tab-target="accessories">ACCESSORIES</li>
+          </ul>
+          <div class="all-products">
+            <div data-tab-content id = "sale">This is sale section</div>
+            <div data-tab-content id = "hot" class = "active">
+              <div class = "products top">
+                <div class = "tablet-view">
+                  <div id="hot-product1">
+                    <img src="images/hot products 1.png" class = "hot-product" alt="product1-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="hot-product2">
+                    <img src="images/hot products 2.png" class = "hot-product" alt="product2-hot" style = "background-color: #EAEBF0;">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "tablet-view">
+                  <div id="hot-product3">
+                    <img src="images/hot products 3.png" class = "hot-product" alt="product3-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="hot-product4">
+                    <img src="images/hot products 4.png" class = "hot-product" alt="product4-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class = "products bottom">
+                <div class = "tablet-view">
+                  <div id="hot-product5">
+                    <img src="images/hot products 5.png" class = "hot-product" alt="product5-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="hot-product6">
+                    <img src="images/hot products 6.png" class = "hot-product" alt="product6-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class = "tablet-view">
+                  <div id="hot-product7">
+                    <img src="images/hot products 7.png" class = "hot-product" alt="product7-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="hot-product8">
+                    <img src="images/hot products 8.png" class = "hot-product" alt="product8-hot">
+                    <div class = "price-container">
+                      <h3>Spread collar shirt</h3>
+                        <div class="price-rating">
+                          <div class="price">$48.99</div>
+                          <div class = "vertical-line"></div>
+                          <div class = "rating-component">
+                            <div class="rating">5.0</div>
+                            <img src="images/star-svgrepo-com.svg" class = "star" alt="star">
+                          </div>
+                          <button>Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-tab-content id = "new-arrivals">This is new-arrivals section</div>
+            <div data-tab-content id = "accessories">This is accessories section</div>
+          </div>
+        </div>
+
+
+        <div class="exclusive-offer">
+          <div id="left-exclusive-offer">
+            <img src="images/exclusive offer.png" id = "exclusive-img">
+          </div>
+          <div id="right-exclusive-offer">
+            <div>
+              <h2>Exclusive Offer</h2>
+              <p>Unlock the ultimate style upgrade with our exclusive
+              offer Enjoy savings of up to 40% off on our latest New
+              Arrivals</p>
+              <div id="time-remaining">
+              <div id="day" class = "time-component">
+                <div class = "exact-time-remaining">06</div>
+                <div class = "time-text">Days</div>
+              </div>
+              <div id="hours" class = "time-component">
+                <div class = "exact-time-remaining">18</div>
+               <div class = "time-text">Hours</div>
+               </div>
+              <div id="minutes" class = "time-component">
+                <div class = "exact-time-remaining">48</div>
+                <div class = "time-text">Minutes</div>
+              </div>
+            </div>
+            </div>
+            <button>BUY NOW</button>
+          </div>
+        </div>
+
+        <div class = "designer">
+          <h2>Designer Clothes For You</h2>
+          <p>Immerse yourself in the world of luxury fashion with our meticulously crafted designer clothes!</p>
+          <div style="display: flex;" class = "tablet-view something">
+            <div id = "designer-first-part" style="display: flex;">
+              <div class="image-container">
+                <img src="images/designer 1.png">
+                <h3>Accessories</h3>
+                <p>Complete your ensemble with
+                  designer accessories such as
+                  handbags, scarves, belts, and hats.</p>
+              </div>
+              <div class="image-container">
+                <img src="images/designer 2.png">
+                <h3>Dresses</h3>
+                <p>Explore a stunning range of designer
+                  dresses, including evening gowns
+                  and chic day dresses.</p>
+              </div>
+            </div>
+            <div id = "designer-second-part">
+              <div class="image-container">
+                <img src="images/designer 3.png">
+                <h3>Outerwear</h3>
+                <p>Browse luxurious designer coats,
+                  jackets, and blazers to stay stylishly
+                  warm during colder seasons.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed-back">
+          <h2>Feedback Corner</h2>
+          <div>
+            <div id = "feed-back-left">
+              <div class="feedback" style="flex-basis: 50%;" >
+                <h3 class = "colons">“</h3>
+                <h3>Emily Wilson</h3>
+                <p>The customer experience was exceptional from
+                  start to finish. The website is user-friendly, the
+                  checkout process was smooth, and the clothes
+                  I ordered fit perfectly. I'm beyond satisfied!</p>
+              </div>
+              <div class="feedback" id = "special" style="flex-basis: 50%;">
+                <h3 class = "colons">“</h3>
+                <h3>Sarah Thompson</h3>
+                <p>I absolutely love the quality and style of the
+                  clothing I purchased from this website. customer
+                  service was outstanding, and I received my order
+                  quickly. Highly recommended!</p>
+              </div>
+            </div>
+            <div>
+              <div class="feedback">
+                <h3 class = "colons">“</h3>
+                <h3>Olivia Martinez</h3>
+                <p>I had a great experience shopping on this
+                  website. The clothes I bought are fashionable
+                  and comfortable. Highly satisfied!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div id = "first-part">
+            <div id = "part-one">
+              <h2>Rivo</h2>
+              <p>Social Media</p>
+              <div class="icons">
+                <img src="images/facebookicon.svg">
+                <img src="images/twitter.svg">
+                <img src="images/instagramlogo.svg">
+  
+              </div>
+            </div>
+  
+            <div class = "list" id = "shop-footer">
+              <h3>Shop</h3>
+              <ul>
+                <li>Products</li>
+                <li>Overview</li>
+                <li>Prices</li>
+                <li>Releases</li>
+              </ul>
+            </div>
+  
+            <div class = "list">
+              <h3>Company</h3>
+              <ul>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>News</li>
+                <li>Support</li>
+              </ul>
+            </div>
+  
+            <div id = "part-two">
+              <h3>Stay Up To Date</h3>
+              <div style = "display: flex; align-items: center;">
+                <input type="text" placeholder="Enter your email" id = "emailInput"><a id = "mailTo" onclick="mailTo()"><button >SUBMIT</button></a>
+              </div>
+            </div>
+          </div>
+          <div id = "second-part">
+            <div id = "line"></div>
+            <div>Terms</div>
+            <div>Privacy</div>
+            <div>Cookies</div>
+          </div>
+        </footer>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="interactive.js"></script>
+</body>
+
+</html>
